@@ -1,0 +1,88 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --backgr-clr: black;
+}
+
+/* Content placing */
+
+* {
+  outline: 1px solid red;
+  color: white;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+.btn {
+  color: black;
+}
+
+.webcontainer {
+  min-height: 100vh;
+  display: flex;
+  background-color: var(--backgr-clr);
+  flex-direction: column;
+  padding: 50px;
+}
+
+.zielony {
+  background-color: yellow;
+}
+
+.content {
+  flex: 1;
+}
+
+/* vertical bar to the timeline */
+
+li {
+  margin: 50px 0;
+}
+.bar {
+  list-style: none;
+  margin-left: 20%;
+}
+.bar > li {
+  position: relative;
+}
+
+.bar > li:before {
+  content: "\25CF";
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.bar > li:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  border-left: 2px solid white;
+  margin-left: 5px;
+  height: 75px; /* this can change height*/
+}
+
+.bar > li:first-of-type:after {
+  top: 50%;
+}
+
+.bar > li:last-of-type:after {
+  top: -60px;
+}
+
+.learned p,
+.learned i {
+  margin: 0;
+}
+
+.to-learn p,
+.to-learn i {
+  margin: 0;
+}
