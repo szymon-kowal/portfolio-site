@@ -6,81 +6,181 @@
     <title>Portfolio</title>
     <script src="./main.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&display=swap');
+    </style>
 </head>
 <body>
     <div class="webcontainer">
-        <div class = ''>
-            <p class="text">Hey, I'm Szymon future Fullstack Developer.
+        <div class="color-box"></div>
+        <div class = 'top-cont'>
+            <p class="text">Hey, I'm Szymon future <span class="gradient">Front-end Developer.</span>
             </p>
-            <button class="btn github"></button>
-            <i class="devicon-github-original"></i>
-            <button class="btn mail">Mail</button>
+            <div class="buttons">
+                <button class="top-nav btn git">
+                    <i class="devicon-github-original"></i>
+                    <div class="btn-text">Github</div>
+                </button>
+                
+                <a href="mailto:00szymon.kowal@gmail.com" class="btn mail">
+                    <span class="material-icons">
+                        email
+                    </span>
+                    <div class="btn-text">Mail</div>
+                </a>
+            </div>
         </div>
         <div class = ''>
+            <p class="text-title">About me</p>
             <p class="text about-me">
-                As I make the shift from process engineering to a MERN full-stack developer, 
+                As I make the shift from process engineering to a Front-end developer, 
                 my goal is to channel my analytical skills honed in chemistry towards crafting 
                 innovative solutions in software development. I aspire to seamlessly integrate my 
                 technical expertise, fostering a symbiotic relationship between my engineering background 
                 and the dynamic world of IT.
             </p>
         </div>
-        <div class = 'timeline'>
-            <ul class="bar">
-                <li>element 1</li>
-                <li></li>
-                <li>element 3</li>
-                <li></li>
-                <li>element 5</li>
-              </ul>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
+        <div class="text-title">My timeline</div>
+        <div class="timeline">
+            <div class="outer">
+              <div class="card">
+                <div class="info">
+                  <h3 class="title">01.2023</h3>
+                  <p>I earned a Bachelor of Science degree in Chemical and Process Engineering.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="info">
+                  <h3 class="title">04.2023</h3>
+                  <p>I decided to try something different and completed the Google Data Analytics certificate.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="info">
+                  <h3 class="title">05.2023</h3>
+                  <p>I decided to learn programming with a friend and started the CS50 course from Harvard.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="info">
+                  <h3 class="title">06.2023</h3>
+                  <p>I began The Odin Project course focusing on learning JavaScript.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="info">
+                  <h3 class="title">08.2023</h3>
+                  <p>I completed the basic JS path and decided to continue to the next level in TOP.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="info">
+                  <h3 class="title">11.2023</h3>
+                  <p>I started learning React with TypeScript.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        <div class="text-title">Tech</div>
         <div class = 'learned'>
-            <div class="item">
-                <i class="devicon-javascript-plain"></i>
-                <p>JavaScript</p>
-            </div>
-            <div class="item">
-                <i class="devicon-css3-plain"></i>
-                <p>CSS</p>
-            </div>
-            <div class="item">
-                <i class="devicon-html5-plain"></i>
-                <p>HTML</p>
-            </div>
-            <div class="item">
-                <i class="devicon-sqlite-plain"></i>
-                <p>SQLite</p>
-            </div>
-            <div class="item">
-                <i class="devicon-jest-plain"></i>
-                <p>Jest</p>
+            <div class="item-cont grid">
+                <div class="item">
+                    <i class="devicon-javascript-plain"></i>
+                    <p>JavaScript</p>
+                </div>
+                <div class="item">
+                    <i class="devicon-css3-plain"></i>
+                    <p>CSS</p>
+                </div>
+                <div class="item">
+                    <i class="devicon-html5-plain"></i>
+                    <p>HTML</p>
+                </div>
+                <div class="item">
+                    <i class="devicon-jest-plain"></i>
+                    <p>Jest</p>
+                </div>
+                <div class="item">
+                    <i class="devicon-webpack-plain"></i>
+                    <p>Webpack</p>
+                </div>
+                <div class="item">
+                    <i class="devicon-sqlite-plain"></i>
+                    <p>SQLite</p>
+                </div>
             </div>
         </div>
+        <div class="text-title">Learning</div>
         <div class = 'to-learn'>
-            <div class="item">
-                <i class="devicon-typescript-plain"></i>
-                <p>TypeScript</p>
+            <div class="item-cont grid">
+                <div class="item">
+                    <i class="devicon-typescript-plain"></i>
+                    <p>TypeScript</p>
+                </div>
+                <div class="item">
+                    <i class="devicon-react-original-wordmark"></i>
+                    <p>React</p>
+                </div> 
+                <div class="item">
+                    <i class="devicon-nodejs-plain-wordmark"></i>
+                    <p>NodeJS</p>
+                </div> 
             </div>
-            <div class="item">
-                <i class="devicon-nodejs-plain-wordmark"></i>
-                <p>NodeJS</p>
-            </div>
-            <div class="item">
-                <i class="devicon-react-original-wordmark"></i>
-                <p>React</p>
-            </div> 
         </div>
+        <div class="text-title">Projects</div>
         <div class = 'projects'>
-            <div class="site-item"></div>
-            <div class="site-item"></div>
-            <div class="site-item"></div>
-            <div class="site-item"></div>
+            <a href="https://szymon-kowal.github.io/TOP-battleship/">
+                <div class="site-item">
+                    <div class="site-title">Battleships</div>
+                    <div class="description">Site where you can play battleships versus computer.</div>
+                    <div class="stack">
+                        <i class="devicon-html5-plain"></i>
+                        <i class="devicon-css3-plain"></i>
+                        <i class="devicon-javascript-plain"></i>
+                        <i class="devicon-jest-plain"></i>
+                        <i class="devicon-webpack-plain"></i>
+                    </div>
+                </div>
+            </a>
+            <a href="https://szymon-kowal.github.io/etch-a-sketch/">
+                <div class="site-item">
+                    <div class="site-title">Etch-a-sketch</div>
+                    <div class="description">Etch-a-sketch site, where you can draw on interactive backboard.</div>
+                    <div class="stack">
+                        <i class="devicon-html5-plain"></i>
+                        <i class="devicon-css3-plain"></i>
+                        <i class="devicon-javascript-plain"></i>
+                    </div>
+                </div>
+            </a>
+            <a href="https://szymon-kowal.github.io/TOP-RPS/">
+                <div class="site-item">
+                    <div class="site-title">Rock-Paper-Scissors</div>
+                    <div class="description">RPS game where you can play versus computer.</div>
+                    <div class="stack">
+                        <i class="devicon-html5-plain"></i>
+                        <i class="devicon-css3-plain"></i>
+                        <i class="devicon-typescript-plain"></i>
+                    </div>
+                </div>
+            </a>
+            <a href="https://szymon-kowal.github.io/TOP-restaurant/"> 
+                <div class="site-item">
+                    <div class="site-title">Restaurant page</div>
+                    <div class="description">If you ever wondered how the Elder Scrolls inn website would look like here it is.</div>
+                    <div class="stack">
+                        <i class="devicon-html5-plain"></i>
+                        <i class="devicon-css3-plain"></i>
+                        <i class="devicon-javascript-plain"></i>
+                        <i class="devicon-webpack-plain"></i>
+                    </div>
+                </div>
+            </a>
         </div>
+        <div class="text-title">Thank you for visiting the page !</div>
     </div>
 </body>
 </html>
