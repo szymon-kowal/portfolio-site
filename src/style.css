@@ -1,392 +1,394 @@
 /* Your CSS styles here */
 body {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-body,
-.webcontainer {
-  background-color: black;
-  background-image: radial-gradient(
-      white,
-      rgba(255, 255, 255, 0.2) 2px,
-      transparent 40px
-    ),
-    radial-gradient(white, rgba(255, 255, 255, 0.05) 1px, transparent 30px),
-    radial-gradient(white, rgba(255, 255, 255, 0.05) 2px, transparent 40px),
-    radial-gradient(
-      rgba(255, 255, 255, 0.4),
-      rgba(255, 255, 255, 0.1) 2px,
-      transparent 30px
-    );
-  background-size:
-    550px 550px,
-    350px 350px,
-    250px 250px,
-    150px 150px;
-  background-position:
-    0 0,
-    40px 60px,
-    130px 270px,
-    70px 100px;
+body {
+	background-color: black;
+	background-image: radial-gradient(
+			white,
+			rgba(255, 255, 255, 0.2) 2px,
+			transparent 40px
+		),
+		radial-gradient(white, rgba(255, 255, 255, 0.05) 1px, transparent 30px),
+		radial-gradient(white, rgba(255, 255, 255, 0.05) 2px, transparent 40px),
+		radial-gradient(
+			rgba(255, 255, 255, 0.4),
+			rgba(255, 255, 255, 0.1) 2px,
+			transparent 30px
+		);
+	background-size:
+		550px 550px,
+		350px 350px,
+		250px 250px,
+		150px 150px;
+	background-position:
+		0 0,
+		40px 60px,
+		130px 270px,
+		70px 100px;
 }
 
 :root {
-  --backgr-clr: black;
-  --card-clr: rgba(9, 9, 26, 0.15);
-  --grid-item-wdth: 200px;
-  --grid-item-gap: 30px;
-  --grid-stackitem-width: 150px;
-  --grid-stackitem-gap: 10px;
-  --backgr-hover-clr: rgba(116, 17, 209, 0.25);
-  --primary-color: #212121;
-  --background-color: #111;
-  --font: sans-serif;
-  --border-color: rgb(116, 17, 209);
+	--backgr-clr: black;
+	--card-clr: rgba(9, 9, 26, 0.15);
+	--grid-item-wdth: 200px;
+	--grid-item-gap: 30px;
+	--grid-stackitem-width: 150px;
+	--grid-stackitem-gap: 10px;
+	--backgr-hover-clr: rgba(116, 17, 209, 0.25);
+	--primary-color: #212121;
+	--background-color: #111;
+	--font: sans-serif;
+	--border-color: rgb(116, 17, 209);
 }
 
 .timeline {
-  margin: 20px auto;
-  padding: 20px;
+	margin: 20px auto;
+	padding: 20px;
 }
 
 /* Card container */
 .card {
-  position: relative;
-  max-width: 400px;
+	position: relative;
+	max-width: 400px;
 }
 
 /* setting padding based on even or odd */
 .card:nth-child(odd) {
-  padding: 30px 0 30px 30px;
+	padding: 30px 0 30px 30px;
 }
 .card:nth-child(even) {
-  padding: 30px 30px 30px 0;
+	padding: 30px 30px 30px 0;
 }
 /* Global ::before */
 .card::before {
-  content: "";
-  position: absolute;
-  width: 50%;
-  border: solid var(--border-color);
+	content: '';
+	position: absolute;
+	width: 50%;
+	border: solid var(--border-color);
 }
 
 /* Setting the border of top, bottom, left */
 .card:nth-child(odd)::before {
-  left: 0px;
-  top: -4.5px;
-  bottom: -4.5px;
-  border-width: 5px 0 5px 5px;
-  border-radius: 50px 0 0 50px;
+	left: 0px;
+	top: -4.5px;
+	bottom: -4.5px;
+	border-width: 5px 0 5px 5px;
+	border-radius: 50px 0 0 50px;
 }
 
 /* Setting the border of top, bottom, right */
 .card:nth-child(even)::before {
-  right: 0;
-  top: 0;
-  bottom: 0;
-  border-width: 5px 5px 5px 0;
-  border-radius: 0 50px 50px 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	border-width: 5px 5px 5px 0;
+	border-radius: 0 50px 50px 0;
 }
 
 /* Removing the border if it is the first card */
 .card:first-child::before {
-  border-top: 0;
-  border-top-left-radius: 0;
+	border-top: 0;
+	border-top-left-radius: 0;
 }
 
 /* Removing the border if it is the last card  and it's odd */
 .card:last-child:nth-child(odd)::before {
-  border-bottom: 0;
-  border-bottom-left-radius: 0;
+	border-bottom: 0;
+	border-bottom-left-radius: 0;
 }
 
 /* Removing the border if it is the last card  and it's even */
 .card:last-child:nth-child(even)::before {
-  border-bottom: 0;
-  border-bottom-right-radius: 0;
+	border-bottom: 0;
+	border-bottom-right-radius: 0;
 }
 
 /* Information about the timeline */
 .info {
-  display: flex;
-  flex-direction: column;
-  color: gray;
-  border-radius: 10px;
-  padding: 10px;
+	display: flex;
+	flex-direction: column;
+	color: gray;
+	border-radius: 10px;
+	padding: 10px;
 }
 
 /* Title of the card */
 .title {
-  color: var(--border-color);
-  position: relative;
+	color: var(--border-color);
+	position: relative;
 }
 
 /* Timeline dot  */
 .title::before {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background: white;
-  border-radius: 999px;
-  border: 3px solid var(--border-color);
+	content: '';
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	background: white;
+	border-radius: 999px;
+	border: 3px solid var(--border-color);
 }
 
 /* text right if the card is even  */
 .card:nth-child(even) > .info > .title {
-  text-align: right;
+	text-align: right;
 }
 
 /* setting dot to the left if the card is odd */
 .card:nth-child(odd) > .info > .title::before {
-  left: -45px;
+	left: -45px;
 }
 
 /* setting dot to the right if the card is odd */
 .card:nth-child(even) > .info > .title::before {
-  right: -45px;
+	right: -45px;
 }
 
 .webcontainer {
-  max-width: 600px;
+	max-width: 600px;
 }
 
 * {
-  color: white;
-  font-family: "Roboto", sans-serif;
-  font-family: "Roboto Slab", serif;
+	color: white;
+	font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto Slab', serif;
 }
 
 html,
 body {
-  min-height: 100vh;
+	min-height: 100vh;
 }
 
 .btn {
-  color: black;
+	color: black;
 }
 
 .webcontainer {
-  min-height: 100vh;
-  display: flex;
-  background-color: var(--backgr-clr);
-  flex-direction: column;
-  padding: 50px;
-  margin-top: -110px;
-  gap: 10px;
-  z-index: 0;
+	min-height: 100vh;
+	display: flex;
+	background-color: rgba(0, 0, 0, 0.15);
+	flex-direction: column;
+	padding: 50px;
+	margin-top: -110px;
+	gap: 10px;
+	z-index: 0;
 }
 
 .zielony {
-  background-color: yellow;
+	background-color: yellow;
 }
 
 .content {
-  flex: 1;
+	flex: 1;
 }
 
 .timeline-cont {
-  display: flex;
+	display: flex;
 }
 
 .left-text,
 .right-text {
-  flex: 1;
+	flex: 1;
 }
 
 .learned p,
 .learned i {
-  margin: 0;
+	margin: 0;
 }
 
 .to-learn p,
 .to-learn i {
-  margin: 0;
+	margin: 0;
 }
 
 i {
-  font-size: 60px;
+	font-size: 60px;
 }
 
 a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 .projects {
-  display: grid;
-  grid-template-rows: repeat(auto-fill, 1fr);
-  grid-template-columns: repeat(auto-fill, minmax(var(--grid-item-wdth), 1fr));
-  grid-gap: var(--grid-item-gap);
+	display: grid;
+	grid-template-rows: repeat(auto-fill, 1fr);
+	grid-template-columns: repeat(
+		auto-fill,
+		minmax(var(--grid-item-wdth), 1fr)
+	);
+	grid-gap: var(--grid-item-gap);
 }
 
 .site-item {
-  background-color: var(--card-clr);
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  margin: 10px;
-  min-height: 127px;
-  gap: 5px;
+	background-color: var(--card-clr);
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+	margin: 10px;
+	min-height: 127px;
+	gap: 5px;
 }
 
 .site-item:hover {
-  background-color: var(--backgr-hover-clr);
+	background-color: var(--backgr-hover-clr);
 }
 
 .description {
-  flex: 1;
+	flex: 1;
 }
 
 .stack i {
-  font-size: 20px;
+	font-size: 20px;
 }
 
 .grid {
-  display: grid;
-  grid-template-rows: repeat(auto-fill, 1fr);
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(var(--grid-stackitem-width), 1fr)
-  );
-  gap: var(--grid-stackitem-gap);
+	display: grid;
+	grid-template-rows: repeat(auto-fill, 1fr);
+	grid-template-columns: repeat(
+		auto-fill,
+		minmax(var(--grid-stackitem-width), 1fr)
+	);
+	gap: var(--grid-stackitem-gap);
 }
 
 .item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  gap: 5px;
-  background-color: var(--card-clr);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	gap: 5px;
+	background-color: var(--card-clr);
 }
 
 .item:hover {
-  background-color: var(--backgr-hover-clr);
+	background-color: var(--backgr-hover-clr);
 }
 
 .left {
-  position: relative;
-  bottom: -450px;
+	position: relative;
+	bottom: -450px;
 }
 
 .left2 {
-  position: relative;
-  bottom: -560px;
+	position: relative;
+	bottom: -560px;
 }
 
 .top-cont .text {
-  font-size: 56px;
-  z-index: 2;
-  position: relative;
+	font-size: 56px;
+	z-index: 2;
+	position: relative;
 }
 
 .color-box {
-  background-color: rgb(116, 17, 209);
-  width: 215px;
-  height: 25px;
-  transform: skew(-10deg, 0);
-  position: relative;
-  top: 136px;
-  left: 225px;
-  z-index: 1;
+	background-color: rgb(116, 17, 209);
+	width: 215px;
+	height: 25px;
+	transform: skew(-10deg, 0);
+	position: relative;
+	top: 136px;
+	left: 225px;
+	z-index: 1;
 }
 
 .gradient {
-  background-image: linear-gradient(
-    to right,
-    #9f29bd,
-    #e956dd
-  ); /* Replace with your gradient colors */
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+	background-image: linear-gradient(
+		to right,
+		#9f29bd,
+		#e956dd
+	); /* Replace with your gradient colors */
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
 }
 
 .btn i {
-  font-size: 20px;
+	font-size: 20px;
 }
 
 .left-bar {
-  position: relative;
-  right: 180px;
+	position: relative;
+	right: 180px;
 }
 
 .text-title {
-  font-size: 25px;
-  font-weight: 550;
+	font-size: 25px;
+	font-weight: 550;
 }
 
 @media (max-width: 538px) {
-  .color-box {
-    left: 0px;
-    top: 210px;
-  }
+	.color-box {
+		left: 0px;
+		top: 210px;
+	}
 }
 
 .buttons {
-  display: flex;
-  gap: 20px;
+	display: flex;
+	gap: 20px;
 }
 
 .btn {
-  display: flex;
-  gap: 10px;
-  background-color: var(--card-clr);
-  font-weight: 700;
-  padding: 10px;
-  border: 0;
-  border-radius: 15px;
-  transition: all 0.2s ease;
+	display: flex;
+	gap: 10px;
+	background-color: var(--card-clr);
+	font-weight: 700;
+	padding: 10px;
+	border: 0;
+	border-radius: 15px;
+	transition: all 0.2s ease;
 }
 
 .btn:hover {
-  cursor: pointer;
-  background-color: white;
-  transform: scale(1.3);
+	cursor: pointer;
+	background-color: white;
+	transform: scale(1.3);
 }
 
 .btn:hover .btn-text {
-  color: black;
+	color: black;
 }
 
 .btn:hover i,
 .btn:hover .material-icons {
-  filter: invert(1);
+	filter: invert(1);
 }
 
 .material-icons {
-  font-size: 20px;
+	font-size: 20px;
 }
 
 .strong {
-  font-weight: 800;
+	font-weight: 800;
 }
 
 li.no-point {
-  margin-top: -40px;
-  padding-left: 20px;
+	margin-top: -40px;
+	padding-left: 20px;
 }
 
 .site-title {
-  font-weight: 600;
+	font-weight: 600;
 }
 
 .title {
-  font-size: 25px;
-  font-weight: 600;
+	font-size: 25px;
+	font-weight: 600;
 }
 
 .site-item,
 .item {
-  border: 2px solid white;
-  border-radius: 15px;
+	border: 2px solid white;
+	border-radius: 15px;
 }
 
 .text-title {
-  font-weight: 600;
+	font-weight: 600;
 }
